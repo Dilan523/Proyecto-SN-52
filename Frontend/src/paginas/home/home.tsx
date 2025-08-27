@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import "./home.css"; // Importamos los estilos externos
+import "./home.css"; // Estilos externos
 
+// Datos de los highlights
 const highlightsData = [
   { imgUrl: 'https://images.unsplash.com/photo-1542744173-05336fcc7ba4?fit=crop&w=800&q=80', alt: 'Tight Race Ahead', text: 'Tight Race Ahead' },
   { imgUrl: 'https://images.unsplash.com/photo-1518770660434-45635f72e917?fit=crop&w=800&q=80', alt: 'The Historic Moment', text: 'The Historic Moment' },
@@ -10,20 +11,19 @@ const highlightsData = [
   { imgUrl: 'https://images.unsplash.com/photo-1528460613867-27b003a3028c?fit=crop&w=800&q=80', alt: 'Busting the Crime Ring', text: 'Busting the Crime Ring' },
 ];
 
+// Iconos sociales
 const socialIcons = {
   facebookIcon: "https://cdn-icons-png.flaticon.com/512/124/124010.png",
   instagramIcon: "https://cdn-icons-png.flaticon.com/512/174/174855.png",
   xIcon: "https://cdn-icons-png.flaticon.com/512/124/124021.png",
   youtubeIcon: "https://cdn-icons-png.flaticon.com/512/174/174883.png",
   logoImage: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80",
-}; 
+};
 
 const Home: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <div className="container">
@@ -36,10 +36,10 @@ const Home: React.FC = () => {
           </div>
           <div className="navbar-actions">
             <Link to="/register">
-            <button className="btn">REGISTRARSE</button>
+              <button className="btn">REGISTRARSE</button>
             </Link>
             <Link to="/login">
-            <button className="btn">INICIAR SESIÓN</button>
+              <button className="btn">INICIAR SESIÓN</button>
             </Link>
             <button
               className="menu-toggle"
@@ -112,7 +112,7 @@ const Home: React.FC = () => {
           <div className="featured-article">
             <h3>Featured Article</h3>
             <div className="article-actions">
-              <button className="article-btn">Me gusto</button>
+              <button className="article-btn">Me gujgjgto</button>
               <button className="article-btn">Highlights</button>
             </div>
             <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Featured" />
@@ -121,15 +121,9 @@ const Home: React.FC = () => {
           <div className="text-name-award">
             <h3>Text Name Award</h3>
             <div className="award-items">
-              <div className="award-item">
-                <span>The Internet Network</span>
-              </div>
-              <div className="award-item">
-                <span>Customing Diversity</span>
-              </div>
-              <div className="award-item">
-                <span>NY Climate Developments</span>
-              </div>
+              <div className="award-item"><span>The Internet Network</span></div>
+              <div className="award-item"><span>Customing Diversity</span></div>
+              <div className="award-item"><span>NY Climate Developments</span></div>
             </div>
           </div>
 
@@ -144,7 +138,9 @@ const Home: React.FC = () => {
           </div>
 
           <div className="data-comment-main">
-            <p>Data comment contains actual impacts as to sociedad, beneficial parameters y ejemplaría que requiere...</p>
+            <p>
+              Data comment contains actual impacts as to sociedad, beneficial parameters y ejemplaría que requiere...
+            </p>
           </div>
 
           <div className="young-weekend">

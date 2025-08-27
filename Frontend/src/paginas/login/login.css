@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #f5f8fa;
+  background: #f5f8fa ;
   font-family: Arial, sans-serif;
 }
 .header {
@@ -22,8 +22,9 @@ body {
   margin-right: 15px;
 }
 .profile-name {
+  color: black;
   font-size: 1.5rem;
-  font-family: serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-decoration: underline;
 }

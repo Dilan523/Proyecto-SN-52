@@ -1,4 +1,7 @@
 import "./login.css";
+import s1 from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/s1.png";
+import s2 from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/s2.png";
+import perfil from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/perfil.png";
 import { Link } from "react-router-dom";
 
 export default function Login() {
@@ -7,7 +10,7 @@ export default function Login() {
       {/* Header */}
       <header className="header">
         <div className="profile">
-          <img src="/img/users.png" alt="Perfil" className="profile-img" />
+          <img src={perfil} alt="Perfil" className="profile-img" />
             <Link to="/">
           <span className="profile-name">SN-52</span>
             </Link>
@@ -30,9 +33,10 @@ export default function Login() {
 
             <label htmlFor="password">Password</label>
             <input type="password" id="password" required />
-            <Link to="/rec_contra">
-            <a href="/rec_contraseña/contraseña.html" className="forgot-link">RECUPERAR CONTRASEÑA</a>
+            <Link to="/rec_contra" className="forgot-link">
+            RECUPERAR CONTRASEÑA
             </Link>
+
             <button type="submit" className="login-btn">
               Login
             </button>
@@ -40,8 +44,8 @@ export default function Login() {
         </div>
 
         {/* Imágenes decorativas */}
-        <img src="/img/s2.png" className="decor-left" alt="" />
-        <img src="/img/s1.png" className="decor-right" alt="" />
+        <img src={s2} className="decor-left" alt="" />
+        <img src={s1} className="decor-right" alt="" />
       </main>
     </div>
   );

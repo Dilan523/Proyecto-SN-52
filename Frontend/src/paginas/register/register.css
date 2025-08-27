@@ -1,11 +1,13 @@
-/* Fondo general */
+/* ===== Fondo general ===== */
 body {
+    height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f8fa;
+    background: linear-gradient(90deg, #8cd7d2 0%, #c4e3e1 100%);
+    overflow-y: auto;
 }
 
-/* Header con degradado */
+/* ===== Header con degradado ===== */
 .header {
     display: flex;
     justify-content: space-between;
@@ -14,18 +16,69 @@ body {
     background: linear-gradient(90deg, #21b0a6 0%, #c4e3e1 100%);
     border-bottom: 2px solid #21b08a;
 }
+
 .titulo {
     font-size: 4rem;
     font-family: serif;
     font-weight: bold;
     margin: 60px 0 30px 220px;
 }
-/* Logo y foto */
+
+/* ===== Logo y foto ===== */
 .logo-container {
     display: flex;
     align-items: center;
 }
-/* Imagen central y botón cambiar foto */
+
+.profile-pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.logo-text {
+    color: black;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ===== Botones ===== */
+.btn, 
+.btn-cambiar-foto, 
+.btn-enviar {
+    margin-left: 15px;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: all 0.3s ease;
+}
+
+.btn {
+    background: #fff;
+}
+.btn:hover {
+    background-color: #66d1cd;
+    color: white;
+}
+
+.btn-cambiar-foto, 
+.btn-enviar {
+    background: #66d1cd;
+}
+.btn-cambiar-foto:hover, 
+.btn-enviar:hover {
+    background-color: #fff;
+    color: #66d1cd;
+}
+
+/* ===== Foto de perfil dentro del formulario ===== */
 .form-profile-pic-container {
     display: flex;
     flex-direction: column;
@@ -42,68 +95,7 @@ body {
     margin-bottom: 10px;
 }
 
-.btn-cambiar-foto {
-    margin-left: 15px;
-    padding: 12px 28px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 8px;
-    background: #66d1cd;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-
-.btn-cambiar-foto:hover {
-    background-color: #fff;
-    color: #66d1cd;
-}
-
-/* Título del formulario */
-.formulario h2 {
-    text-align: center;
-    color: #2193b0;
-    margin-bottom: 18px;
-    margin-top: 0;
-    font-weight: 600;
-}
-
-.profile-pic {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 15px;
-}
-
-.logo-text {
-    font-size: 1.5rem;
-    font-family: serif;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-/* Botones del header */
-.header-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.btn {
-    margin-left: 15px;
-    padding: 12px 28px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 8px;
-    background: #fff;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-.btn:hover {
-    background-color: #66d1cd;
-    color: white;
-}
-
-/* Main content */
+/* ===== Main content ===== */
 .main-content {
     display: flex;
     justify-content: center;
@@ -113,7 +105,7 @@ body {
     padding: 40px 0;
 }
 
-/* Decoraciones */
+/* ===== Decoraciones ===== */
 .decor {
     position: absolute;
     width: 500px;
@@ -129,78 +121,10 @@ body {
 .decor-right {
     right: 0;
     bottom: 100px;
-}
-.decor-right {
-    position: absolute;
     transform: translate(30px, 50px) rotate(180deg);
-    transition: transform 0.3s ease-in-out; /* animación opcional */
+    transition: transform 0.3s ease-in-out;
 }
 
-
-/* Formulario */
-.formulario {
-    background: rgba(255,255,255,0.85);
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(33,147,176,0.08);
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    min-width: 400px;
-    z-index: 2;
-    margin: 0 60px;
-}
-
-.formulario label {
-    font-size: 1rem;
-    color: #000000;
-    margin-bottom: 6px;
-}
-
-.formulario input {
-    padding: 10px;
-    border: 2px solid #111010;
-    border-radius: 4px;
-    font-size: 1rem;
-    outline: none;
-    margin-bottom: 10px;
-    background: #f5f8fa;
-}
-
-.formulario input:focus {
-    border-color: #6dede4;
-}
-
-.btn-enviar {
-    margin-left: 15px;
-    padding: 12px 28px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 8px;
-    background: #66d1cd;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-
-.btn-enviar:hover {
-    background-color: #fff;
-    color: #66d1cd;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .main-content {
-        flex-direction: column;
-        padding: 20px 0;
-    }
-    .formulario {
-        min-width: 90vw;
-        margin: 0 10px;
-    }
-    .decor {
-        width: 120px;
-    }
-}
 .decor-bottom-left {
     position: absolute;
     bottom: 20px;
@@ -217,7 +141,64 @@ body {
     z-index: 0;
 }
 
+/* ===== Formulario ===== */
+.formulario {
+    background: rgba(255,255,255,0.85);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(33,147,176,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 400px;
+    max-width: 80vw;
+    overflow-y: auto;
+    z-index: 2;
+    margin: 0 60px;
+}
+
+.formulario h2 {
+    text-align: center;
+    color: #2193b0;
+    margin: 0 0 18px;
+    font-weight: 600;
+}
+
+.formulario label {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+.formulario input {
+    padding: 10px;
+    border: 2px solid #111;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 10px;
+    background: #f5f8fa;
+}
+.formulario input:focus {
+    border-color: #6dede4;
+}
+
+/* ===== Responsive ===== */
 @media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .formulario {
+        min-width: 90vw;
+        margin: 0 10px;
+    }
+
+    .decor {
+        width: 120px;
+    }
+
     .decor-bottom-left,
     .decor-bottom-right {
         width: 100px;

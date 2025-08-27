@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import s1 from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/s1.png";
+import s6 from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/s6.png";
+import perfil from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/perfil.png";
+import fondo from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/fondo.avif";
 import "./rec_contra.css"; // tu archivo de estilos
 
 export default function RecuperarContraseña() {
@@ -7,7 +11,7 @@ export default function RecuperarContraseña() {
       {/* Header */}
       <header className="header">
         <div className="profile">
-          {/* <img src={usersImg} alt="Perfil" className="profile-img" /> */}
+          <img src={perfil} alt="Perfil" className="profile-img" />
           <Link to="/">
           <span className="profile-name">SN-52</span>
           </Link>
@@ -22,8 +26,11 @@ export default function RecuperarContraseña() {
         </div>
       </header>
 
-      {/* Background */}
-      <div className="background"></div>
+      {/* Fondo */}
+      <div
+        className="background"
+        style={{ backgroundImage: `url(${fondo})` }}
+      ></div>
 
       {/* Título */}
       <h1 className="titulo">RECUPERAR CONTRASEÑA</h1>
@@ -31,7 +38,7 @@ export default function RecuperarContraseña() {
       {/* Formulario */}
       <div className="form-container">
         {/* Adorno superior */}
-        {/* <img src={s1} alt="Adorno Superior" className="adorno adorno-top" /> */}
+        <img src={s1} alt="Adorno Superior" className="adorno adorno-top" />
 
         <form className="login-form">
           <label htmlFor="email">Email </label>
@@ -46,7 +53,7 @@ export default function RecuperarContraseña() {
         </form>
 
         {/* Adorno inferior */}
-        {/* <img src={s6} alt="Adorno Inferior" className="adorno adorno-bottom" /> */}
+        <img src={s6} alt="Adorno Inferior" className="adorno adorno-bottom" />
       </div>
     </div>
   );

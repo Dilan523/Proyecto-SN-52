@@ -33,8 +33,9 @@ body {
     margin-right: 15px;
 }
 .profile-name {
+    color: black;
     font-size: 1.5rem;
-    font-family: serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -57,7 +58,6 @@ body {
 .background {
     position: absolute;
     inset: 0;
-    background: url('../img/fondo.avif') center center / cover no-repeat;
     filter: contrast(1.1) brightness(1.05); /* realce de nitidez */
     z-index: -1;
 }
