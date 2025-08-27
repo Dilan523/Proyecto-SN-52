@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import s1 from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/s1.png";
-import s6 from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/s6.png";
-import perfil from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/perfil.png";
-import fondo from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/fondo.avif";
+import s1 from "/Users/Aprendiz/Proyecto-SN-52/Frontend/src/assets/Img/s1.png";
+import s6 from "/Users/Aprendiz/Proyecto-SN-52/Frontend/src/assets/Img/s6.png";
+import perfil from "/Users/Aprendiz/Proyecto-SN-52/Frontend/src/assets/Img/perfil.png";
+import fondo from "/Users/Aprendiz/Proyecto-SN-52/Frontend/src/assets/Img/fondo.avif";
 import "./rec_contra.css"; // tu archivo de estilos
 
 export default function RecuperarContraseña() {

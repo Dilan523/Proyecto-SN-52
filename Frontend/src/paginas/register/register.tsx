@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import perfil from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/perfil.png";
-import s1 from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/s1.png";
-import s2 from "/Users/dilan/Proyecto-SN-52/Frontend/src/assets/Img/s2.png";
+import perfil from "/Users/Aprendiz/Proyecto-SN-52/Frontend/src/assets/Img/perfil.png";
+import s1 from "/Users/Aprendiz/Proyecto-SN-52/Frontend/src/assets/Img/s1.png";
+import s2 from "/Users/Aprendiz/Proyecto-SN-52/Frontend/src/assets/Img/s2.png";
 import "./register.css";
 
 export default function Registro() {
@@ -20,7 +20,9 @@ export default function Registro() {
     <div>
       <header className="header">
         <div className="logo-container">
-          <img src={perfil} alt="Foto de perfil" className="profile-pic" />
+          <Link to="/perfil">
+          <img src={perfil} alt="Perfil" className="profile-pic" />
+          </Link>
           <Link to="/">
             <span className="logo-text">SN-52</span>
           </Link>

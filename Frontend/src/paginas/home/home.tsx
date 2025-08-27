@@ -31,7 +31,9 @@ const Home: React.FC = () => {
       <header>
         <div className="navbar-top">
           <div className="navbar-logo">
+            <Link to="/perfil">
             <img src={socialIcons.logoImage} alt="Perfil" />
+            </Link>
             <span>SN-52</span>
           </div>
           <div className="navbar-actions">
